@@ -27,7 +27,7 @@ public class verifiesolde {
             somme = somme + c.getSolde();
 
         }
-        if (somme > prix) {
+        if (somme >= prix) {
             return new aide(1);
         }
         return new aide(0);

@@ -31,12 +31,14 @@ public class retrancher {
             }
             if (somme < c.getSolde()) {
                 c.setSolde(c.getSolde() - somme);
+                repc.save(c);
                 break;
             } else {
                 somme = somme - c.getSolde();
                 c.setSolde(0);
+                repc.save(c);
             }
-            repc.save(c);
+
         }
         return "facture payée";
     }
